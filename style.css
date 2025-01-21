@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	font-size: 16px;
 	font-family: "Roboto", serif;
+	transition: all 0.2s ease-in-out;
 }
 
 :root {
@@ -58,6 +59,10 @@ main {
 	height: 100%;
 }
 
+svg {
+	cursor: pointer;
+}
+
 .container {
 	/* width: 100%; */
 	flex-grow: 1;
@@ -82,7 +87,7 @@ main {
 	align-items: center;
 	width: 100%;
 	flex: 1;
-	padding: 1rem 0.5rem;
+	padding: 0.5rem;
 }
 
 .header__search {
@@ -109,12 +114,17 @@ main {
 	fill: var(--button-green-hover-bg);
 }
 
-.header__profile .profile-image-wrapper {
+.profile-image-wrapper {
 	border-radius: 50%;
-	width: 3rem;
-	height: 3rem;
-	border: 1px solid var(--button-green-bg);
+	width: 3.5rem;
+	height: 3.5rem;
+	border: 1px solid transparent;
 	overflow: hidden;
+}
+
+.profile-image-wrapper.profile-lg {
+	width: 5rem;
+	height: 5rem;
 }
 
 .header__profile span {
@@ -122,10 +132,58 @@ main {
 	font-weight: 700;
 }
 
-.header__profile .profile-image-wrapper .profile-image {
+.profile-image-wrapper .profile-image {
 	width: inherit;
 	height: inherit;
 	object-fit: cover;
+}
+
+.profile-image-wrapper .profile-image:hover {
+	scale: 1.2;
+}
+
+.profile-image-wrapper:hover {
+	border-color: var(--button-green-hover-bg);
+}
+
+.header__user-info {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	height: 100%;
+}
+
+.user-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+}
+
+.user-info p,
+.user-info h4 {
+	color: var(--text-secondary);
+}
+
+.user-info p {
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 0.85rem;
+}
+
+.user-info h4 {
+	font-size: 1.75rem;
+	font-weight: 700;
+}
+
+.user-info h4 span {
+	font-size: 1.75rem;
+	font-weight: 400;
+}
+
+.header__options {
+	display: flex;
+	gap: 2rem;
 }
 
 .sidebar {
@@ -178,15 +236,81 @@ main {
 	background-color: var(--bg-primary);
 	color: var(--text-primary);
 	padding: 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.projects {
+	flex: 1 1 0;
+}
+
+.projects__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-auto-rows: 15rem;
+	gap: 2rem;
+	padding: 2rem 0;
+	padding-right: 2rem;
+	overflow-y: auto;
+	height: calc(100vh - 18.07rem);
+}
+
+.feed {
+	width: 20rem;
+}
+
+.feed h1,
+.projects h1,
+.card__text h2 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 2px;
+	color: var(--text-primary);
 }
 
 .card {
 	background-color: var(--card-bg);
 	color: var(--text-primary);
-	border: 1px solid var(--border-color);
+	border-left: 0.75rem solid var(--button-bg);
 	border-radius: 8px;
 	box-shadow: 0 4px 8px var(--card-shadow);
-	padding: 1rem;
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.card:hover {
+	border-left: 1.5rem solid var(--button-green-hover-bg);
+}
+
+.card .card__text p {
+	margin-top: 0.75rem;
+	font-size: 0.85rem;
+	letter-spacing: 1px;
+	color: var(--text-secondary);
+}
+
+.card .card__links {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	margin-top: auto;
+}
+
+.card-icon {
+	height: 2.15rem;
+	width: 2.15rem;
+	fill: var(--text-primary);
+	padding: 0.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.card-icon:hover {
+	background-color: var(--bg-primary);
+	fill: var(--button-blue-hover-bg);
 }
 
 button {
@@ -232,6 +356,10 @@ a:hover {
 	fill: var(--button-text);
 	height: 1.5rem;
 	width: 1.5rem;
+}
+
+.search-btn:hover {
+	fill: var(--button-green-hover-bg);
 }
 
 input {
