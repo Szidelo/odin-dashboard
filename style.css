@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: "Roboto", serif;
+}
+
+:root {
+	--bg-primary: #0f0e17;
+	--bg-secondary: #1c1b29;
+	--bg-tertiary: #282744;
+
+	--text-primary: #ffffff;
+	--text-secondary: #a7a9be;
+	--text-highlight: #ff8906;
+
+	--border-color: #393649;
+
+	--button-bg: #ff8906;
+	--button-text: #ffffff;
+	--button-hover-bg: #ffaa33;
+
+	/* Green Button Variant */
+	--button-green-bg: #48cf83;
+	--button-green-hover-bg: #23e065;
+
+	/* Blue Button Variant */
+	--button-blue-bg: #5746ea;
+	--button-blue-hover-bg: #4291f7;
+
+	--link-blue: #7273b5;
+	--link-blue-hover: #f3f9ff;
+
+	--card-bg: #1c1b29;
+	--card-shadow: rgba(0, 0, 0, 0.5);
+
+	--input-bg: #282744;
+	--input-text: #ffffff;
+	--input-border: #393649;
+	--input-focus-border: #23e065;
+}
+
+body {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+}
+
+main {
+	display: flex;
+	height: 100%;
+}
+
+.container {
+	/* width: 100%; */
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: var(--bg-secondary);
+	border-bottom: 1px solid var(--border-color);
+	padding: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	/* width: max-content; */
+	flex-basis: 1;
+}
+
+.header__top,
+.header__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	flex: 1;
+	padding: 1rem 0.5rem;
+}
+
+.header__search {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 66%;
+}
+
+.header__profile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+.header__profile svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: var(--input-text);
+}
+
+.header__profile svg:hover {
+	fill: var(--button-green-hover-bg);
+}
+
+.header__profile .profile-image-wrapper {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid var(--button-green-bg);
+	overflow: hidden;
+}
+
+.header__profile span {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.header__profile .profile-image-wrapper .profile-image {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+
+.sidebar {
+	background-color: var(--bg-secondary);
+	color: var(--text-secondary);
+	padding: 1rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.sidebar__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sidebar__header h1 {
+	font-size: 3rem;
+	color: var(--button-green-bg);
+}
+
+.sidebar__header .logo {
+	height: 100%;
+	width: 3rem;
+	fill: var(--button-green-bg);
+}
+
+.sidebar__navigation ul li {
+	list-style: none;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+}
+
+.sidebar__navigation ul li a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.sidebar__navigation ul li a svg.nav-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: var(--link-blue);
+}
+
+.main-content {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	padding: 2rem;
+}
+
+.card {
+	background-color: var(--card-bg);
+	color: var(--text-primary);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px var(--card-shadow);
+	padding: 1rem;
+}
+
+button {
+	background-color: var(--button-bg);
+	color: var(--button-text);
+	border: none;
+	border-radius: 3rem;
+	padding: 0.5rem 1.5rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: var(--button-hover-bg);
+}
+
+button.green {
+	background-color: var(--button-green-bg);
+}
+
+button.green:hover {
+	background-color: var(--button-green-hover-bg);
+}
+
+button.blue {
+	background-color: var(--button-blue-bg);
+}
+
+button.blue:hover {
+	background-color: var(--button-blue-hover-bg);
+}
+
+a {
+	color: var(--link-blue);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--link-blue-hover);
+}
+
+.search-btn {
+	fill: var(--button-text);
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+input {
+	background-color: var(--input-bg);
+	color: var(--input-text);
+	border: 1px solid var(--input-border);
+	border-radius: 3rem;
+	padding: 0.5rem 1rem;
+	transition: border-color 0.3s ease;
+	width: 100%;
+	max-width: 960px;
+}
+
+input:focus {
+	border-color: var(--input-focus-border);
+	outline: none;
+}
