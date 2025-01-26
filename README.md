@@ -2,6 +2,12 @@
 
 ---
 
+## Live Demo
+
+[**Try the Odin-Dashboard Page Here**](https://szidelo.github.io/odin-dashboard/)
+
+---
+
 ## Screenshots
 
 ### Desktop Dark-Theme View
@@ -56,7 +62,7 @@
 -   **CSS3**:
 
     -   Enhances the layout using a combination of **Grid** and **Flexbox** for a responsive and adaptable design.
-    -   Includes styling for interactivity, dynamic input labels, and a visually appealing theme.
+    -   Includes styling for interactivity, and a visually appealing theme.
 
 -   **JavaScript**:
     -   Implements a **Dark Theme Toggle**:
@@ -103,7 +109,7 @@
 
 ## Acknowledgments
 
-This project is part of the [Odin Project's Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations).
+This project is part of the [Odin Project's JavaScript Course](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard).
 
 ---
 
