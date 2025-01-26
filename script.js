@@ -10,3 +10,15 @@ themeToggle.addEventListener("click", () => {
 	const isLight = body.classList.toggle("light-theme");
 	localStorage.setItem("theme", isLight ? "light-theme" : "");
 });
+
+const sidebar = document.querySelector(".sidebar");
+const sidebarToggle = document.querySelector("#menu-btn");
+
+sidebarToggle.addEventListener("click", () => {
+	sidebar.classList.toggle("active");
+	if (sidebar.className.includes("active")) {
+		body.style.overflowY = "hidden";
+	} else {
+		body.style.overflowY = "auto";
+	}
+});
