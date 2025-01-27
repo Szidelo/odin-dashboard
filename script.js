@@ -22,3 +22,15 @@ sidebarToggle.addEventListener("click", () => {
 		body.style.overflowY = "auto";
 	}
 });
+
+const newBtn = document.querySelector("#new-btn");
+const modal = document.querySelector(".modal-backdrop");
+const closeModalBtn = document.querySelector("#close-modal");
+
+newBtn.addEventListener("click", () => {
+	modal.classList.add("active");
+});
+
+closeModalBtn.addEventListener("click", () => {
+	modal.classList.remove("active");
+});

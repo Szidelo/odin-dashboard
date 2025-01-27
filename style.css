@@ -328,6 +328,7 @@ svg {
 	gap: 1.75rem;
 	height: calc(100vh - 13.4rem);
 	padding-right: 1rem;
+	padding-bottom: 1rem;
 	overflow-y: auto;
 }
 
@@ -496,7 +497,8 @@ a:hover {
 	fill: var(--button-green-hover-bg);
 }
 
-input {
+input,
+textarea {
 	background-color: var(--input-bg);
 	color: var(--input-text);
 	border: 1px solid var(--input-border);
@@ -507,9 +509,84 @@ input {
 	max-width: 960px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
 	border-color: var(--input-focus-border);
 	outline: none;
+}
+
+.modal-backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.modal-backdrop.active {
+	display: block;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2.25rem 1.75rem;
+	background-color: var(--bg-tertiary);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px var(--card-shadow);
+	min-width: 20rem;
+}
+
+.modal h1 {
+	text-align: center;
+	color: var(--text-primary);
+	font-size: 1.5rem;
+	padding-bottom: 1.75rem;
+	margin-top: 1.75rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: relative;
+}
+
+.close-btn {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	fill: rgb(255, 73, 73);
+	cursor: pointer;
+	height: 2rem;
+}
+
+.close-btn:hover {
+	fill: rgb(255, 107, 107);
+}
+
+.form-control {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form-control input,
+.form-control textarea {
+	border-radius: 8px;
+}
+
+.form-control textarea {
+	resize: vertical;
+}
+
+form button {
+	border-radius: 8px;
 }
 
 @media (max-width: 1279px) {
