@@ -419,6 +419,10 @@ svg {
 	overflow: hidden;
 }
 
+.card__text h2 {
+	text-transform: capitalize;
+}
+
 .card .card__text p,
 .new-list p {
 	margin-top: 0.75rem;
